@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
 import './App.css'
+import Tabset from'./module/Tabset'
 
 function App() {
   const [count, setCount] = useState(10)
@@ -23,6 +24,7 @@ function App() {
       <button class="tablink about" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
     </div>
   </div>
+  <Tabset/>
     </>
   )
 }

@@ -1,9 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import Com from './Сoming'
+import LetOv from './Leftovers'
+import Issu from './Issue'
+import PCard from './Personcard'
 
 function Tabset (){
 return (
-  <h2>Hello</h2>
+  <>
+  <Com/>
+  <LetOv/>
+  <Issu/>
+  <PCard/>
+  </>
  )
 }
 
