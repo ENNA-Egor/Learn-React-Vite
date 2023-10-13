@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+    <h1 class="text-success d-flex justify-content-center mt-3">Выдача и учёт спецодежды.</h1>
     <div class="tablinks">
     <div class="divtablink">
       <button class="home  tablink"  onclick="openPage('.home', 'TabHome')" >Приход</button>
