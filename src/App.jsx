@@ -1,5 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-// import TabS from './module/Tabset'
 import './App.css'
 
 function App() {
@@ -22,7 +23,6 @@ function App() {
       <button class="tablink about" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
     </div>
   </div>
-  {/* <TabS/> */}
     </>
   )
 }
