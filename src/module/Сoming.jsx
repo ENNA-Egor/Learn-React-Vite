@@ -7,7 +7,7 @@ return (
   <div id="TabHome" class="tabcontent ">
       <form name="form1" id="form1" action="">
         <div>
-          {/* <input type="date" class="btn btn-success m-2"> */}
+          <input type="date" class="btn btn-success m-2"/>
         </div>
         <legend class="text-primary" > Наименование: 
         <select name="subject" id="subject" class="btn btn-success m-2">
@@ -25,12 +25,12 @@ return (
         </legend>
         </legend>
         <legend class="text-primary">Количество
-          {/* <input type="number" class="btn btn-success m-2"> */}
+          <input type="number" class="btn btn-success m-2"/>
         </legend>
         <legend class="text-primary">Стоимость
-          {/* <input type="number" class="btn btn-success m-2"> */}
+          <input type="number" class="btn btn-success m-2"/>
         </legend>
-        {/* <input type="submit" class="btn btn-success m-2"value="Записать"> */}
+        <input type="submit" class="btn btn-success m-2"value="Записать"/>
       </form>
     </div>    
     </>
