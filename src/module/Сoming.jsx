@@ -3,8 +3,8 @@ import React from 'react'
 function Coming (){
 return (
     <>
-  <h2>Hello Coming</h2>
   <div id="TabHome" class="tabcontent ">
+  <h2>Hello Coming</h2>
       <form name="form1" id="form1" action="">
         <div>
           <input type="date" class="btn btn-success m-2"/>

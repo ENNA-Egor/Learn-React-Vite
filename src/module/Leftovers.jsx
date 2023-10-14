@@ -3,6 +3,7 @@ import React from 'react'
 function Leftovers (){
 return (
   <>
+  <div id="TabNews" class="tabcontent ">
   <h2>Остатки</h2>
   <form name="form2" id="form2" action="">
         <div>
@@ -14,6 +15,7 @@ return (
         </select>
       </div>
       </form>
+    </div>
   </> 
  )
 }
