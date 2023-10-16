@@ -9,21 +9,47 @@ function App() {
   const [count, setCount] = useState(10)
   const [countEnd, setCountEnd] = useState(10)
 
+  function openPage(pageName, pageName1, elmnt, color) {
+    // // Hide all elements with class="tabcontent" by default */
+    alert ('Ok');
+    // var i, tabcontent, tablinks;
+    // tabcontent = document.getElementsByClassName("tabcontent");
+    // for (i = 0; i < tabcontent.length; i++) {
+    //   tabcontent[i].style.display = "none";
+    // }
+
+  
+    // // // Show the specific tab content
+    // document.getElementById(pageName1).style.display = "block";
+  
+    // // // Add the specific color to the button used to open the tab content
+    // let elem = document.querySelector(pageName);
+    // let elemAll = document.querySelectorAll('.tablink');
+    // for(i=0; i< elemAll.length; i++){
+    //   elemAll[i].classList.remove('active');
+    // }
+    // elem.classList.add('active');
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  // document.getElementById("defaultOpen").click();
+
+
   return (
     <>
     <h1 class="text-success d-flex justify-content-center mt-3">Выдача и учёт спецодежды.</h1>
     <div class="tablinks">
     <div class="divtablink">
-      <button class="home  tablink"  onclick="openPage('.home', 'TabHome')" >Приход</button>
+      <button onClick={openPage} class="home  tablink"  onclick="openPage('.home', 'TabHome')" >Приход</button>
     </div>
     <div class="divtablink">
-      <button class="tablink news" onclick="openPage('.news', 'TabNews')" >Остатки</button>
+      <button onClick={openPage} class="tablink news" onclick="openPage('.news', 'TabNews')" >Остатки</button>
     </div>
       <div class="divtablink">
-      <button class="tablink contact" onclick="openPage('.contact', 'TabContact')" id="defaultOpen">Выдать</button>
+      <button onClick={openPage} class="tablink contact" onclick="openPage('.contact', 'TabContact')" id="defaultOpen">Выдать</button>
     </div>
       <div class="divtablink">
-      <button class="tablink about" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
+      <button onClick={openPage} class="tablink about" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
     </div>
   </div>
   <Tabset/>
