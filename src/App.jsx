@@ -10,8 +10,19 @@ function App() {
   const [countEnd, setCountEnd] = useState(10)
 
   function openPage(pageName, pageName1, elmnt, color) {
+
+    alert (pageName);
+    alert (pageName1);
+  // function openPage(event) {
     // // Hide all elements with class="tabcontent" by default */
-    alert ('Ok');
+    // alert ('Ok');
+    // alert (event);
+    // console.log(event.target.className);
+    // if (event.target.className === 'home'){
+    //   alert ('Ok');
+    // } else {
+    //   alert('No');
+    // }
     // var i, tabcontent, tablinks;
     // tabcontent = document.getElementsByClassName("tabcontent");
     // for (i = 0; i < tabcontent.length; i++) {
@@ -43,13 +54,13 @@ function App() {
       <button onClick={openPage} class="home  tablink"  onclick="openPage('.home', 'TabHome')" >Приход</button>
     </div>
     <div class="divtablink">
-      <button onClick={openPage} class="tablink news" onclick="openPage('.news', 'TabNews')" >Остатки</button>
+      <button onClick={openPage} class="news tablink" onclick="openPage('.news', 'TabNews')" >Остатки</button>
     </div>
       <div class="divtablink">
-      <button onClick={openPage} class="tablink contact" onclick="openPage('.contact', 'TabContact')" id="defaultOpen">Выдать</button>
+      <button onClick={openPage} class="contact tablink" onclick="openPage('.contact', 'TabContact')" id="defaultOpen">Выдать</button>
     </div>
       <div class="divtablink">
-      <button onClick={openPage} class="tablink about" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
+      <button onClick={openPage} class="about tablink" onclick="openPage('.about', 'TabAbout')">Личная карточка</button>
     </div>
   </div>
   <Tabset/>
