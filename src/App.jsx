@@ -20,9 +20,9 @@ function App() {
       for (var i = 0; i < tabBody.length; i++) {
         if (dataTab == i) {
           tabBody[i].classList.remove('hide');
-          tabBody[i].classList.add('active');
+          tabBody[i].classList.add('visible');
         } else {
-          tabBody[i].classList.remove('active');
+          tabBody[i].classList.remove('visible');
           tabBody[i].classList.add('hide');
         }
       }
@@ -34,19 +34,19 @@ function App() {
 
   return (
     <>
-    <h1 class="text-success d-flex justify-content-center mt-3">Выдача и учёт спецодежды.</h1>
-    <div class="tablinks">
-    <div class="divtablink">
-      <button onClick={openPage} class="tablink home"  data-tab ="0">Приход</button>
+    <h1 className="text-success d-flex justify-content-center mt-3">Выдача и учёт спецодежды.</h1>
+    <div className="tablinks">
+    <div className="divtablink">
+      <button onClick={openPage} className="tablink home active"  data-tab ="0">Приход</button>
     </div>
-    <div class="divtablink">
-      <button onClick={openPage} class="tablink news" data-tab ="1">Остатки</button>
+    <div className="divtablink">
+      <button onClick={openPage} className="tablink news" data-tab ="1">Остатки</button>
     </div>
-      <div class="divtablink">
-      <button onClick={openPage} class="tablink contact"  data-tab ="2">Выдать</button>
+      <div className="divtablink">
+      <button onClick={openPage} className="tablink contact"  data-tab ="2">Выдать</button>
     </div>
-      <div class="divtablink">
-      <button onClick={openPage} class="tablink about" data-tab ="3" >Личная карточка</button>
+      <div className="divtablink">
+      <button onClick={openPage} className="tablink about" data-tab ="3" >Личная карточка</button>
     </div>
   </div>
   <Tabset/>

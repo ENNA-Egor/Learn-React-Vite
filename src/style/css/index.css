@@ -158,6 +158,10 @@ html {
   display: none;
 }
 
+.visible {
+  display: block;
+}
+
 legend {
   font-size: 14px;
 }
