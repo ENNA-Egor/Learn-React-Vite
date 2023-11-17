@@ -3,7 +3,7 @@ import React from 'react'
 function Coming (){
 return (
     <>
-  <div id="TabHome" class="tabcontent ">
+  <div id="TabHome" class="tabcontent active">
   <h2>Hello Coming</h2>
       <form name="form1" id="form1" action="">
         <div>

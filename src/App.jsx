@@ -9,27 +9,24 @@ function App() {
   
   function openPage(event) {
     let evValue = (event.target.className).slice(0,7);
-      alert('click    '+ evValue);
-
-    //   let evValue = (event.target.className).slice(0,5);
-    // if (evValue =='tab-h') {
-    //   let dataTab = event.target.getAttribute('data-tab');
-    //   let tabH = document.getElementsByClassName('tab-h');
-    //   for (let i = 0; i < tabH.length; i++) {
-    //     tabH[i].classList.remove('active');
-    //   }
-    //   event.target.classList.add('active');
-    //   var tabBody = document.getElementsByClassName('tab-b');
-    //   for (var i = 0; i < tabBody.length; i++) {
-    //     if (dataTab == i) {
-    //       tabBody[i].classList.remove('hide');
-    //       tabBody[i].classList.add('visible');
-    //     } else {
-    //       tabBody[i].classList.remove('visible');
-    //       tabBody[i].classList.add('hide');
-    //     }
-    //   }
-    // }
+    if (evValue =='tablink') {
+      let dataTab = event.target.getAttribute('data-tab');
+      let tabH = document.getElementsByClassName('tablink');
+      for (let i = 0; i < tabH.length; i++) {
+        tabH[i].classList.remove('active');
+      }
+      event.target.classList.add('active');
+      var tabBody = document.getElementsByClassName('tabcontent');
+      for (var i = 0; i < tabBody.length; i++) {
+        if (dataTab == i) {
+          tabBody[i].classList.remove('hide');
+          tabBody[i].classList.add('active');
+        } else {
+          tabBody[i].classList.remove('active');
+          tabBody[i].classList.add('hide');
+        }
+      }
+    }
 
    }
   

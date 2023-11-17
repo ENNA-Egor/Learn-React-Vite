@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body {
   background-color: rgb(244, 255, 196);
-  min-width: 600px;
+  min-width: 200px;
   margin-top: 30px;
 }
 
@@ -95,7 +95,7 @@ html {
   display: flex;
   /* width: calc(15% + 10px); */
   width: 15%;
-  border: 2px solid rgb(30, 129, 0);
+  border: 1px solid rgb(30, 129, 0);
   border-bottom: 0px;
   position: relative;
 }
@@ -107,8 +107,8 @@ html {
   outline: none;
   cursor: pointer;
   padding: 5px 6px;
-  font-size: 14px;
   width: 100%;
+  font-size: 5px;
 }
 .tablink:hover {
   background-color: #f8fc22;
@@ -120,12 +120,11 @@ html {
 } */
 .tabcontent {
   color: rgb(99, 99, 99);
-  display: none;
   padding: 20px 10px;
   height: 100%;
   max-width: 60%;
   margin: 0 auto;
-  border: 2px solid rgb(30, 129, 0);
+  border: 1px solid rgb(30, 129, 0);
 }
 
 .btn {
@@ -153,6 +152,10 @@ html {
   border-bottom: 0;
   position: relative;
   top: 1px;
+}
+
+.hide {
+  display: none;
 }
 
 legend {
