@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-    <h1 className="text-success d-flex justify-content-center mt-3">Выдача и учёт спецодежды.</h1>
+    <h1 className="text-success d-flex justify-content-center mt-3 fs-3">Выдача и учёт спецодежды.</h1>
     <div className="tablinks">
     <div className="divtablink">
       <button onClick={openPage} className="tablink home active"  data-tab ="0">Приход</button>
