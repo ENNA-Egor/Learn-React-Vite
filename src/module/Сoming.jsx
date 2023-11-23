@@ -1,7 +1,12 @@
 import React from 'react'
 
-function Coming (){
-return (
+class Coming extends React.Component{
+  state = {
+
+  }
+
+  render(){
+return 
     <>
   <div id="TabHome" className="tabcontent  visible">
     <h2>Приход</h2>
@@ -34,7 +39,8 @@ return (
       </form>
     </div>    
     </>
- )
+  }
+
 }
 
 export default Coming
