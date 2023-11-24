@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-let subjectObject = {
+const subjectObject = {
   "Летний костюм": {
     "44-46": ["170-176", "182-188"],
     "48-50": ["170-176", "182-188"],
@@ -30,12 +30,18 @@ let subjectObject = {
 class Coming extends Component {
 
   render(){
-
+    for (const property in subjectObject){
+      console.log(`${property}:${subjectObject[property]}`)
+    }
     console.log(Object.keys(subjectObject));
-    // const val = subjectObject.forEach(element => {
-    //  return element +1;
-    // });
-    // console.log(val);
+    const arrSubject = Object.keys(subjectObject)
+    console.log(arrSubject);
+
+    // function subjectOptions (){
+    //   const subOptions = arrSubject.map((el)=> 
+    //   <option key={arrSubject} value={arrSubject}> {arrSubject} </option>
+    //   )
+    // }
 
 
 return (
@@ -47,9 +53,9 @@ return (
         </div>
         <legend className="text-primary fs-5" > Наименование: 
         <select name="subject" id="subject" className="btn btn-success m-2">
-          <option value="value1">Летний костюм</option>
-          <option value="value2">Зимний костюм</option>
-          <option value="value3">Плащ</option>
+       { arrSubject.map((el)=> 
+      <option key={el} value={el}> {el} </option>
+      ) }
         </select>
         <legend className="text-primary fs-5"> Размер:
          <select name="topic" id="topic" className="btn btn-success m-2" >
