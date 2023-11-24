@@ -20,15 +20,24 @@ let subjectObject = {
     "60-62": ["170-176", "182-188"]
   }
 }
+// let subjectObject = {
+//   "Летний костюм": 25,
+//   "Зимний костюм": 31,
+//   "Плащ": 44
+// }
 
-alert(subjectObject[1]);
 
 class Coming extends Component {
 
-  
-  
-
   render(){
+
+    console.log(Object.keys(subjectObject));
+    // const val = subjectObject.forEach(element => {
+    //  return element +1;
+    // });
+    // console.log(val);
+
+
 return (
   <div id="TabHome" className="tabcontent  visible">
     <h2>Приход</h2>
@@ -38,17 +47,18 @@ return (
         </div>
         <legend className="text-primary fs-5" > Наименование: 
         <select name="subject" id="subject" className="btn btn-success m-2">
-          sub
-          <option value="" selected="selected">Выберите наименование СИЗ</option>
+          <option value="value1">Летний костюм</option>
+          <option value="value2">Зимний костюм</option>
+          <option value="value3">Плащ</option>
         </select>
         <legend className="text-primary fs-5"> Размер:
          <select name="topic" id="topic" className="btn btn-success m-2" >
-          <option value="" selected="selected">Выберите размер</option>
+          <option  >Выберите размер</option>
         </select>
       </legend>
         <legend className="text-primary fs-5"> Рост:
           <select name="chapter" id="chapter" className="btn btn-success m-2">
-            <option value="" selected="selected">Выберите рост</option>
+            <option >Выберите рост</option>
           </select>
         </legend>
         </legend>
