@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Leftovers (){
+class Leftovers extends Component {
+
+  render(){
+
+  
 return (
-  <>
   <div id="TabNews" className="tabcontent hide">
   <h2>Остатки</h2>
   <form name="form2" id="form2" action="">
@@ -16,8 +19,8 @@ return (
       </div>
       </form>
     </div>
-  </> 
- )
+    )
+  }
 }
 
 export default Leftovers

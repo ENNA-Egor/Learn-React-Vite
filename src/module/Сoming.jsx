@@ -34,19 +34,8 @@ const subjectObject = {
 class Coming extends Component {
 
   render(){
-    for (const property in subjectObject){
-      console.log(`${property}:${subjectObject[property]}`)
-    }
-    console.log(Object.keys(subjectObject));
+ 
     const arrSubject = Object.keys(subjectObject)
-    console.log(arrSubject);
-
-    // function subjectOptions (){
-    //   const subOptions = arrSubject.map((el)=> 
-    //   <option key={arrSubject} value={arrSubject}> {arrSubject} </option>
-    //   )
-    // }
-
 
 return (
   <div id="TabHome" className="tabcontent  visible">
