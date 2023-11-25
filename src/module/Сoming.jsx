@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 
 const subjectObject = {
+  "": {
+    "": [""],
+  },
   "Летний костюм": {
+    "": [""],
     "44-46": ["170-176", "182-188"],
     "48-50": ["170-176", "182-188"],
     "52-54": ["170-176", "182-188"],
@@ -9,6 +13,7 @@ const subjectObject = {
     "60-62": ["170-176", "182-188"]
   },
   "Зимний костюм": {
+    "": [""],
     "44-46": ["170-176", "182-188"],
     "48-50": ["170-176", "182-188"],
     "52-54": ["170-176", "182-188"],
@@ -16,26 +21,58 @@ const subjectObject = {
     "60-62": ["170-176", "182-188"]
   },
   "Плащ": {
+    "": [""],
     "56-58": ["170-176", "182-188"],
     "60-62": ["170-176", "182-188"]
   },
-  "Обувь": {
-    "Летняя":["42", "43", "44", "41", "40", "39"],
-    "Зимняя":["42", "43", "44", "41", "40", "39"]
+  "Обувь летняя": {
+    " ": [""],
+    "39.":["-"],
+    "40.":["-"],
+    "41.":["-"],
+    "42.":["-"],
+    "43.":["-"],
+    "44.":["-"],
+    "45.":["-"],
+  },
+  "Обувь зимняя": {
+    " ": [""],
+    "39.":["-"],
+    "40.":["-"],
+    "41.":["-"],
+    "42.":["-"],
+    "43.":["-"],
+    "44.":["-"],
+    "45.":["-"],
   },
 }
-// let subjectObject = {
-//   "Летний костюм": 25,
-//   "Зимний костюм": 31,
-//   "Плащ": 44
-// }
+
 
 
 class Coming extends Component {
-
+  
+  constructor (props){
+    super(props);
+    this.state ={
+      subject: '',
+      topic: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  
+  handleChange(event) {
+    this.setState({[event.target.name]: event.target.value});
+  }
+  
   render(){
- 
+    
     const arrSubject = Object.keys(subjectObject)
+    const arrSubSubject = Object.keys(subjectObject[this.state.subject])
+    console.log(arrSubSubject);
+    
+
+
 
 return (
   <div id="TabHome" className="tabcontent  visible">
@@ -45,14 +82,19 @@ return (
           <input type="date" className="btn btn-success m-2"/>
         </div>
         <legend className="text-primary fs-5" > Наименование: 
-        <select name="subject" id="subject" className="btn btn-success m-2">
+        <select value={this.state.subject} onChange={this.handleChange} name="subject" id="subject" className="btn btn-success m-2">
+          {/* <option value="" disabled selected></option> */}
        { arrSubject.map((el)=> 
       <option key={el} value={el}> {el} </option>
       ) }
         </select>
         <legend className="text-primary fs-5"> Размер:
-         <select name="topic" id="topic" className="btn btn-success m-2" >
-          <option  >Выберите размер</option>
+         <select value={this.state.topic} onChange={this.handleChange} name="topic" id="topic" className="btn btn-success m-2" >
+         {/* <option value="" disabled selected></option>  */}
+         { arrSubSubject.map((el)=> 
+      <option key={el} value={el}> {el} </option>
+      ) }
+    
         </select>
       </legend>
         <legend className="text-primary fs-5"> Рост:
