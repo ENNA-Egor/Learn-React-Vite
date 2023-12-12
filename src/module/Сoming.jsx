@@ -51,6 +51,7 @@ class Coming extends Component {
     this.state ={
       subject: '',
       topic: '',
+      chapter: '',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -64,7 +65,9 @@ class Coming extends Component {
     
     const arrSubject = Object.keys(subjectObject)
     const arrSubSubject = Object.keys(subjectObject[this.state.subject])
-    console.log(arrSubSubject);
+    const arrSubSubSubject = Object.keys(subjectObject['Летний костюм']['44-46'][0])
+    // console.log(arrSubSubject);
+    console.log(arrSubSubSubject);
     
 
 
@@ -94,7 +97,10 @@ return (
       </legend>
         <legend className="text-primary fs-5"> Рост:
           <select name="chapter" id="chapter" className="btn btn-success m-2">
-            <option >Выберите рост</option>
+          <option value="" ></option>
+          {/* { arrSubSubSubject.map((el)=> 
+      <option key={el} value={el}> {el} </option>
+      ) } */}
           </select>
         </legend>
         </legend>
