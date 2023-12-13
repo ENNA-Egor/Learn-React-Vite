@@ -61,7 +61,7 @@ return (
         <select name="topic" id="topic" className="btn btn-success m-2" value={this.state.selectedTopic} onChange={this.handleTopicChange}>
           {this.state.topics.map(topic => <option key={topic} value={topic}>{topic}</option>)}
         </select>
-      </legend>
+        </legend>
         <legend className="text-primary fs-5"> Рост:
         <select name="chapter" id="chapter" className="btn btn-success m-2" value={this.state.selectedChapter} onChange={this.handleChapterChange}>
           {this.state.chapters.map(chapter => <option key={chapter} value={chapter}>{chapter}</option>)}
