@@ -10,9 +10,18 @@ class Leftovers extends Component {
     };
   }
 
+  handleSubjectChange = (event) => {
+    const selectedSubject = event.target.value;
+    this.setState({
+      selectedSubject,
+    });
+    alert(selectedSubject);
+  };
+  
+  
   render(){
-
-return (
+    
+    return (
   <div id="TabNews" className="tabcontent hide">
     <h2>Остатки</h2>
       <form name="form2" id="form2" action="">
